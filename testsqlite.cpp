@@ -47,6 +47,10 @@ void TestSqlite::on_pushButton_clicked()
             //更新数据
             QString updateSQL1 = "update student set address='sg004' where id=1";
 
+            if(!query.exec(updateSQL1)){
+                 qDebug()<<query.lastError();
+            }
+
             //删除数据
             QString deleteSQl1 = "delete from student where id=3 ";
             if(!query.exec(deleteSQl1)){
