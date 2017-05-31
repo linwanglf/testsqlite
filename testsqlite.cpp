@@ -40,7 +40,7 @@ void TestSqlite::on_pushButton_clicked()
             QString insert_sql2 = "insert into student(id,name,address) values(2,002,'sg002')";
             QString insert_sql3 = "insert into student(id,name,address) values(3,003,'sg003')";
 
-            if(!query.exec(insert_sql1)){
+            if(!query.exec(insert_sql2)){
                  qDebug()<<query.lastError();
             }
 
